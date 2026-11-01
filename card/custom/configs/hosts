@@ -1,0 +1,25 @@
+127.0.0.1   localhost   localhost.localdomain
+
+# ---- Tuya cloud blocklist ----
+# (extended with names actually observed in this cam's traffic: a1/m1/m6/stream,
+#  the iot-dns/h6 endpoint-discovery resolvers, and the app/image/CDN helpers)
+
+# Tuya device API + MQTT broker, all regions
+127.0.0.1 a.tuyaus.com a1.tuyaus.com a2.tuyaus.com a3.tuyaus.com m1.tuyaus.com m2.tuyaus.com m6.tuyaus.com mq.gw.tuyaus.com s.tuyaus.com
+127.0.0.1 a.tuyacn.com a1.tuyacn.com a2.tuyacn.com a3.tuyacn.com m1.tuyacn.com m2.tuyacn.com m6.tuyacn.com mq.gw.tuyacn.com s.tuyacn.com
+127.0.0.1 a.tuyaeu.com a1.tuyaeu.com a2.tuyaeu.com a3.tuyaeu.com m1.tuyaeu.com m2.tuyaeu.com m6.tuyaeu.com mq.gw.tuyaeu.com s.tuyaeu.com
+
+# Tuya endpoint discovery DNS servers (device asks these where the API servers are)
+127.0.0.1 h6.iot-dns.com h6-eu.iot-dns.com h6-us.iot-dns.com h6.useast.iot-dns.com h6.uswest.iot-dns.com
+127.0.0.1 h6.tuya-ds.com h6-eu.tuya-ds.com h6-useast.tuya-ds.com h6-uswest.tuya-ds.com h6-useast.tuya-md.com
+127.0.0.1 h6.tuyacn.com h6.tuyaus.com h6.tuyaeu.com h6.tuya-utc.com
+
+# device helper / OTA / media / support endpoints
+127.0.0.1 static1.tuyaeu.com static1.tuyaus.com static1.tuyacn.com
+127.0.0.1 images.tuyaeu.com images.tuyaus.com images.tuyacn.com
+127.0.0.1 stream.tuyaeu.com stream.tuyaus.com stream.tuyacn.com
+127.0.0.1 app-support.tuyaeu.com app-support.tuyaus.com app-support.tuyacn.com
+127.0.0.1 airtake.tuyaeu.com airtake.tuyaus.com airtake.tuyacn.com
+127.0.0.1 airtake-private-data-eu.s3.eu-central-1.amazonaws.com
+127.0.0.1 d1qre8p2imniok.cdn5th.com euimagesd2h2yqnfpu4gl5.cdn5th.com
+127.0.0.1 messages.tuyacn.com messages.tuyaus.com messages.tuyaeu.com

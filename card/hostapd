@@ -1,0 +1,7 @@
+#!/bin/sh
+# The stock init (factory mode, triggered by _ht_ap_mode.conf) copies this
+# file to /tmp/hostapd and executes it as root instead of the real hostapd.
+for d in /mnt /tmp/sd /media/mmcblk0p1; do
+    [ -f "$d/hack.sh" ] && exec /bin/sh "$d/hack.sh"
+done
+echo "hostapd hook: hack.sh not found" > /tmp/hack.err
